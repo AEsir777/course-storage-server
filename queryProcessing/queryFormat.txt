@@ -1,0 +1,40 @@
+Available Databases:
+Course
+cid  courseName prof
+
+Due
+did, cid, content, dueDateTime
+
+Available Queries:
+get Due (cid:`CS432`)
+0    1    2 3  4    5  6      7   8
+add Due (cid:`CS987`, content:`finish assignment5`, dueDateTime:2023-01-01 00:00)
+complete Due (cid:`CS987`, content:`finish assignment5`)
+update Due (cid:`CS987`, content:`finish assignment5`) to (cid:`CS287`, dueDateTime:2023-02-01 00:00)
+
+Lexical Syntax:
+GET: get
+ADD: add
+COMPLETE: complete
+UPDATE: update
+TO: to
+ID: alphabet
+LPAREN: (
+RPAREN: )
+COL: col
+COLON: :
+COMMA: ,
+STRING: `finish assignment5` `CS987` only support alphabet + space + number
+DATE: 2023-01-01
+TIME: 00:00
+
+
+Grammar Rules:
+
+query -> GET db 
+query -> GET db LPAREN cvpair RPAREN 
+
+cvpair -> col COLON val cvpair
+cvpair -> col COLON val
+
+query -> ADD db LPAREN col COLON val RPAREN 

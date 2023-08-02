@@ -1,1 +1,1 @@
-# socket-based-key-value-storage-server
+# socket-based-database

@@ -1,0 +1,30 @@
+class NestedLoopJoin extends PlanNode {
+    std::tuple curOuter;
+}
+
+std::tuple NestedLoopJoin::GetNext() {
+    while ( true ) {
+        if ( curOuter == nullptr ) {
+              curOuter = input[outer]->getNext();
+              if ( curOuter == nullptr ) return nullptr;
+              input[inner]->open();  
+        }
+
+        while ( curInner = input[inner]->getNext() ) {
+            if ( curInner joins with curOuter ) {
+                return ( cur Inner join cur OUter);
+            }
+        }
+
+        input[inner]->close();
+    }
+}
+
+void NestedLoopJoin::open() {
+    input[outer]->open();
+}
+
+void NestedLoopJoin::close() {
+    input[inner]->close();
+    input[outer]->close();
+}

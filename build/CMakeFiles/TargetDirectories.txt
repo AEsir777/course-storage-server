@@ -1,0 +1,4 @@
+/u7/k322liu/learn/storage-service/build/CMakeFiles/server.dir
+/u7/k322liu/learn/storage-service/build/CMakeFiles/client.dir
+/u7/k322liu/learn/storage-service/build/CMakeFiles/edit_cache.dir
+/u7/k322liu/learn/storage-service/build/CMakeFiles/rebuild_cache.dir
